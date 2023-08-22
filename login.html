@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  let y = document.forms["myForm"]["pname"].value;
+  if (y == "") {
+    alert("password must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+  <section>
+  	<div class="color"></div>
+  	<div class="color"></div>
+  	<div class="color"></div>
+  	<div class="box">
+  		<div class="square" style="--i:0;"></div>
+  		<div class="square" style="--i:1;"></div>
+  		<div class="square" style="--i:2;"></div>
+  		<div class="square" style="--i:3;"></div>
+  		<div class="square" style="--i:4;"></div>
+  		<div class="container">
+  			<div class="form">
+  				<h2>LOGIN FORM</h2>
+  				<form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+  					<div class="inputBox">
+  						<input type="text" placeholder="Username" name="fname">
+  					</div>
+  					<div class="inputBox">
+  						<input type="Password" placeholder="Password" name="pname">
+  					</div>
+  					 <button class="btn" style="color: black;">
+   Sign in
+</button>	<p class="forget">Forget password ? <a href="#">Click Here</a> </p>
+  					<p class="forget">Don't have an acoount ? <a href="#">Sign up</a> </p>
+  				</form>
+  			</div>
+  		</div>
+  	</div>
+  </section>
+</body>
+</html>
